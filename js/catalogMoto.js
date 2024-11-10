@@ -59,3 +59,8 @@ const standartSlider3 = new Swiper("#standartSlider3", {
     }
 });
 window.standartSlider3 = standartSlider3;
+
+const navbarMobile = document.querySelector('.navbar__mobile_btns_menu');
+navbarMobile?.addEventListener('click', function() {
+    document.querySelector('.navbar__mobile_menu').classList.toggle('active');
+})

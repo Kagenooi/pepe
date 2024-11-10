@@ -21,6 +21,10 @@
 
     &__top {
 
+        @media (max-width: 1020px) {
+            display: none;
+        }
+
         &_wrapper {
             display: flex;
             align-items: center;
@@ -168,6 +172,7 @@
                 @media (max-width: 520px) {
                     margin-right: 18px;
                 }
+
                 &::before {
                     content: '';
                     display: block;
@@ -244,6 +249,32 @@
                         right: -12px;
                     }
                 }
+            }
+        }
+    }
+
+    &__mobile {
+        display: none;
+
+        @media (max-width: 1020px) {
+            display: block;
+            position: relative;
+
+            &_menu {
+                position: absolute;
+                display: none;
+            }
+
+            &_wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px 20px;
+            }
+
+            &_btns {
+                display: flex;
+                gap: 20px;
             }
         }
     }

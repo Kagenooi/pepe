@@ -3,10 +3,6 @@ window.adaptive = adaptive;
 window.addEventListener('resize', function () { adaptive() });
 adaptive();
 
-import {
-
-} from "./module.js";
-
 const marksSwiper = new Swiper("#marksSwiper", {
     slidesPerView: 1,
     loop: true,
@@ -136,3 +132,9 @@ for (let i = 0; i < footerBtns.length; i++) {
         }
     })
 }
+
+
+const navbarMobile = document.querySelector('.navbar__mobile_btns_menu');
+navbarMobile?.addEventListener('click', function() {
+    document.querySelector('.navbar__mobile_menu').classList.toggle('active');
+})

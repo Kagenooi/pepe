@@ -13,3 +13,8 @@ for (let i = 0; i < btns.length; i++) {
         }
     })
 }
+
+const navbarMobile = document.querySelector('.navbar__mobile_btns_menu');
+navbarMobile?.addEventListener('click', function() {
+    document.querySelector('.navbar__mobile_menu').classList.toggle('active');
+})
