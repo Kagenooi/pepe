@@ -38,7 +38,7 @@ window.standartSlider2 = standartSlider2;
 
 const standartSlider3 = new Swiper("#standartSlider3", {
     spaceBetween: 10,
-    slidesPerView: 3,
+    slidesPerView: 2,
     loop: true,
     navigation: {
         nextEl: "#standartSlider3 .slider__header_btns_btn.next",
@@ -53,7 +53,7 @@ const standartSlider3 = new Swiper("#standartSlider3", {
         1440: {
             spaceBetween: 40
         },
-        580: {
+        520: {
             slidesPerView: 3,
         }
     }

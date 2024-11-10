@@ -58,3 +58,28 @@ let buba = new Swiper('.catalog__el_slider', {
     }
 });
 window.buba = buba;
+
+
+const standartSlider3 = new Swiper("#standartSlider3", {
+    spaceBetween: 10,
+    slidesPerView: 2,
+    loop: true,
+    navigation: {
+        nextEl: "#standartSlider3 .next",
+        prevEl: "#standartSlider3 .prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+        dynamicMainBullets: 3,
+    },
+    breakpoints: {
+        1440: {
+            spaceBetween: 40,
+        },
+        520: {
+            slidesPerView: 3,
+        }
+    }
+});
+window.standartSlider3 = standartSlider3;

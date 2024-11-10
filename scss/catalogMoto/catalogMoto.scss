@@ -25,12 +25,22 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: left;
+
+        @media (max-width: 520px) {
+            letter-spacing: 0;
+            font-size: 9vw;
+            line-height: 1.2;
+        }
     }
 
     &__img {
         width: 100%;
         position: relative;
         height: 630px;
+
+        @media (max-width: 520px) {
+            height: auto;
+        }
 
         &_pic {
             position: absolute;
@@ -39,12 +49,22 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+
+            @media (max-width: 520px) {
+                position: static;
+            }
         }
 
         &_abs {
             position: absolute;
             bottom: 35px;
             right: 16%;
+
+            @media (max-width: 520px) {
+                width: 42%;
+                bottom: 7px;
+                right: 16%;
+            }
         }
     }
 }
@@ -61,6 +81,14 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-gap: 25px;
+
+        @media (max-width: 1440px) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+        @media (max-width: 1020px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
     }
 
     &__el {
@@ -169,6 +197,74 @@
             &_price {
                 font-weight: 600;
                 color: #ADFF00;
+            }
+        }
+    }
+
+    &__wrapper {
+        &.grid {
+            @media (max-width: 520px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px 15px;
+
+                .catalog__el {
+                    max-width: 130px;
+                    padding: 0;
+                    background: none;
+
+                    &_btns {
+                        display: none;
+                    }
+
+                    * {
+                        font-size: 10px;
+                        line-height: 1.2;
+                    }
+
+                    &_content {
+                        padding: 4px 0 0;
+                        border: none;
+
+                        &_name {
+                            font-size: 10px;
+                            line-height: 1.2;
+                        }
+
+                        &_year {
+                            display: none;
+                        }
+                    }
+
+                    &_footer {
+                        padding: 0;
+                    }
+
+                    &_slider {
+
+                        &_item {
+                            height: 120px;
+                        }
+
+                        &_btns {
+
+                            &_btn {
+                                height: 30px;
+
+                                &_icon {
+                                    width: 6px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.scrolled {
+            @media (max-width: 520px) {
+                grid-template-columns: repeat(6, 1fr);
+                overflow-x: scroll;
+                padding-bottom: 10px;
             }
         }
     }
