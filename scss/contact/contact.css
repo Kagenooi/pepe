@@ -334,6 +334,8 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
     opacity: 0;
     transition: 0.3s;
     z-index: 1100;
+    background: #03393C;
+    padding: 30px 0;
   }
   .navbar__mobile_menu.active {
     visibility: visible;
