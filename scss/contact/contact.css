@@ -599,11 +599,34 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
   display: flex;
   gap: 25px;
 }
+@media (max-width: 1440px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 0 15px 75px;
+  }
+}
+@media (max-width: 520px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 
 .contact {
   display: flex;
   gap: 25px;
   align-items: flex-start;
+}
+@media (max-width: 1440px) {
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1020px) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
 }
 .contact__title {
   font-size: 170px;
@@ -618,12 +641,38 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
   text-transform: uppercase;
   letter-spacing: -10px;
 }
+@media (max-width: 1440px) {
+  .contact__title {
+    font-size: 130px;
+    line-height: 150px;
+  }
+}
+@media (max-width: 1020px) {
+  .contact__title {
+    font-size: 80px;
+    letter-spacing: 0;
+  }
+}
+@media (max-width: 520px) {
+  .contact__title {
+    line-height: 1.2;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
 .contact__map {
   background: #03393B;
   border-radius: 35px;
   padding: 40px;
   width: 100%;
   max-width: 630px;
+}
+@media (max-width: 1020px) {
+  .contact__map {
+    padding: 15px;
+    border-radius: 10px;
+  }
 }
 .contact__map_title {
   font-family: "metric", sans-serif;
@@ -653,6 +702,17 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
   padding: 40px;
   border-radius: 35px;
 }
+@media (max-width: 1440px) {
+  .contact__details_social {
+    padding: 30px 40px;
+  }
+}
+@media (max-width: 1020px) {
+  .contact__details_social {
+    padding: 15px;
+    border-radius: 10px;
+  }
+}
 .contact__details_social_title {
   font-family: "metric", sans-serif;
   font-size: 21px;
@@ -679,6 +739,17 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
   border-radius: 35px;
   padding: 40px;
 }
+@media (max-width: 1440px) {
+  .contact__details_info {
+    padding: 30px 40px;
+  }
+}
+@media (max-width: 1020px) {
+  .contact__details_info {
+    padding: 15px;
+    border-radius: 10px;
+  }
+}
 .contact__details_info_title {
   font-family: "metric", sans-serif;
   font-size: 21px;
@@ -687,6 +758,11 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
   color: #000;
   margin-bottom: 25px;
 }
+@media (max-width: 1440px) {
+  .contact__details_info_title {
+    margin-bottom: 21px;
+  }
+}
 .contact__details_info_phone {
   font-size: 47px;
   font-weight: 600;
@@ -694,6 +770,13 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
   font-family: "montserrat", sans-serif;
   margin-bottom: 8px;
   color: #000;
+}
+@media (max-width: 1440px) {
+  .contact__details_info_phone {
+    display: block;
+    line-height: 1.2;
+    font-size: 36px;
+  }
 }
 .contact__details_info_mail {
   display: block;
@@ -705,12 +788,24 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
   margin: 30px 0;
   color: #000;
 }
+@media (max-width: 1440px) {
+  .contact__details_info_mail {
+    line-height: auto;
+    margin: 15px 0;
+  }
+}
 .contact__details_info_adress {
   font-size: 25px;
   font-weight: 400;
   line-height: 30.48px;
   font-family: "montserrat", sans-serif;
   color: #000;
+}
+@media (max-width: 1440px) {
+  .contact__details_info_adress {
+    line-height: 1.2;
+    font-size: 24px;
+  }
 }
 .contact__details_info_adress b {
   font-weight: 700;
@@ -719,11 +814,35 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
   font-family: "montserrat", sans-serif;
   color: #000;
 }
+@media (max-width: 1440px) {
+  .contact__details_info_adress b {
+    line-height: 1.2;
+    font-size: 24px;
+  }
+}
 
 .pic {
   margin-left: -90px;
   width: 470px;
   margin-top: -165px;
+}
+@media (max-width: 1440px) {
+  .pic {
+    width: 380px;
+    margin-top: -120px;
+    margin-left: -55px;
+  }
+}
+@media (max-width: 1020px) {
+  .pic {
+    margin-top: 0;
+  }
+}
+@media (max-width: 520px) {
+  .pic {
+    width: 100%;
+    margin: 0;
+  }
 }
 .pic__img {
   width: 100%;

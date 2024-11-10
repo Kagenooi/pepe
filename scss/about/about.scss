@@ -25,9 +25,10 @@
     }
 
     @media (max-width: 620px) {
-        font-size: 32px;
+        font-size: 28px;
         line-height: 38px;
         margin: 130px 0 35px;
+        padding: 0 15px;
     }
 }
 
@@ -51,18 +52,31 @@
     display: grid;
     gap: 30px;
 
-    @media (max-width: 620px) {
+    @media (max-width: 520px) {
         gap: 10px;
+
+        .car {
+            position: static !important;
+        }
     }
+
     &__pic {
         position: relative;
         height: 520px;
         padding: 42px;
         border-radius: 35px;
 
-        @media (max-width: 620px) {
+        @media (max-width: 520px) {
             border-radius: 15px;
             height: 190px;
+
+            &.car {
+                height: auto;
+
+                img {
+                    padding-top: 10px;
+                }
+            }
         }
 
         &_img {
@@ -74,7 +88,6 @@
             z-index: 1010;
             object-fit: cover;
             border-radius: 35px;
-
 
             @media (max-width: 620px) {
                 border-radius: 15px;
@@ -132,7 +145,7 @@
         &_wrapper {
             display: grid;
             grid-gap: 25px;
-            
+
             @media (max-width: 620px) {
                 grid-gap: 0;
                 max-height: 0px;
@@ -180,11 +193,5 @@
                 }
             }
         }
-    }
-}
-
-.mobileNone {
-    @media (max-width: 620px) {
-        display: none;
     }
 }
