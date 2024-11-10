@@ -18,13 +18,18 @@ const marksSwiper = new Swiper("#marksSwiper", {
         el: ".swiper-pagination",
         dynamicBullets: true,
         dynamicMainBullets: 3,
+    },
+    breakpoints: {
+        520: {
+            slidesPerView: 3,
+        }
     }
 });
 window.marksSwiper = marksSwiper;
 
 const standartSlider = new Swiper("#standartSlider", {
     spaceBetween: 10,
-    slidesPerView: 3,
+    slidesPerView: 2,
     loop: true,
     navigation: {
         nextEl: "#standartSlider .slider__header_btns_btn.next",
@@ -37,10 +42,10 @@ const standartSlider = new Swiper("#standartSlider", {
     },
     breakpoints: {
         1440: {
-            spaceBetween: 10
+            spaceBetween: 10,
         },
-        580: {
-            slidesPerView: 2,
+        520: {
+            slidesPerView: 3,
         }
     }
 });
@@ -69,7 +74,7 @@ window.standartSlider2 = standartSlider2;
 
 const standartSlider3 = new Swiper("#standartSlider3", {
     spaceBetween: 10,
-    slidesPerView: 3,
+    slidesPerView: 2,
     loop: true,
     navigation: {
         nextEl: "#standartSlider3 .slider__header_btns_btn.next",
@@ -84,8 +89,8 @@ const standartSlider3 = new Swiper("#standartSlider3", {
         1440: {
             spaceBetween: 40
         },
-        580: {
-            slidesPerView: 2,
+        520: {
+            slidesPerView: 3,
         }
     }
 });
@@ -117,21 +122,6 @@ document.addEventListener('click', (e) => {
             selectcontent[i].classList.remove('active');
             selectBtn[i].classList.remove('active');
         }
-    }
-})
-
-
-const filterBtn = document.querySelector('.filter__openBtn');
-const filterWrapper = document.querySelector('.filter__content');
-filterBtn.addEventListener('click', function () {
-    if (filterWrapper.style.maxHeight) {
-        filterWrapper.style.maxHeight = null;
-        filterWrapper.classList.remove('active');
-        document.querySelector('.filter__content').style.overflow = 'hidden';
-    } else {
-        filterWrapper.classList.add('active');
-        document.querySelector('.filter__content').style.overflow = 'visible';
-        filterWrapper.style.maxHeight = filterWrapper.style.maxHeight + filterWrapper.scrollHeight + 'px';
     }
 })
 

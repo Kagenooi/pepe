@@ -8,7 +8,7 @@ export function adaptive() {
         zoom = document.body.clientWidth / 7.68 / 100;
     }
     if (document.body.clientWidth < 521) {
-        zoom = document.body.clientWidth / 3.7 / 100;
+        zoom = document.body.clientWidth / 3.2 / 100;
     }
     wrapper.style.zoom = zoom;
 }
