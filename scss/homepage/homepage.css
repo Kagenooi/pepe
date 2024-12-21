@@ -1385,7 +1385,7 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
 }
 @media (max-width: 620px) {
   .sliderWrapper__content.left {
-    padding: 15px;
+    padding: 15px 20px;
   }
 }
 .sliderWrapper__content.left .slider {
@@ -1401,7 +1401,7 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
 }
 @media (max-width: 620px) {
   .sliderWrapper__content.right {
-    padding: 15px;
+    padding: 15px 20px;
   }
 }
 .sliderWrapper__content.right .slider {
