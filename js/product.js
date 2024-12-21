@@ -13,10 +13,17 @@ navbarMobileClose?.addEventListener('click', function () {
 
 
 const swiper = new Swiper(".mySwiper", {
-    spaceBetween: 10,
-    slidesPerView: 4,
+    spaceBetween: 5,
+    slidesPerView: 3,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+        // when window width is >= 640px
+        520: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        }
+    }
 });
 const swiper2 = new Swiper(".mySwiper2", {
     spaceBetween: 10,
@@ -29,3 +36,14 @@ const swiper2 = new Swiper(".mySwiper2", {
         swiper: swiper,
     },
 });
+
+
+let buba = new Swiper('.catalog__el_slider', {
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+        nextEl: `.catalog__el_slider .catalog__el_slider_btns_btn.next`,
+        prevEl: `.catalog__el_slider .catalog__el_slider_btns_btn.prev`,
+    }
+});
+window.buba = buba;
