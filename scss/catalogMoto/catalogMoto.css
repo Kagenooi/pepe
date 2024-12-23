@@ -329,18 +329,117 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 320px;
     height: 100%;
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
     z-index: 1100;
     background: #03393C;
-    padding: 30px 0;
+    overflow-x: auto;
+  }
+  .navbar__mobile_menu::-webkit-scrollbar {
+    display: none;
   }
   .navbar__mobile_menu.active {
     visibility: visible;
     opacity: 1;
     transition: 0.3s;
+  }
+  .navbar__mobile_menu_footer {
+    padding: 30px 20px;
+    display: grid;
+    grid-gap: 10px;
+  }
+  .navbar__mobile_menu_footer_title {
+    font-family: "montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.94px;
+    color: #A6FC00;
+  }
+  .navbar__mobile_menu_footer_social {
+    display: flex;
+    grid-gap: 25px;
+  }
+  .navbar__mobile_menu_footer_social_link {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  .navbar__mobile_menu_footer_social_link_icon {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .navbar__mobile_menu_footer_mail, .navbar__mobile_menu_footer_address {
+    font-family: "montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.07px;
+  }
+  .navbar__mobile_menu_footer_phone {
+    font-size: 19px;
+    font-family: "montserrat", sans-serif;
+    font-weight: 700;
+    line-height: 23.16px;
+  }
+  .navbar__mobile_menu_header {
+    padding: 90px 20px 15px;
+    background: #021D1F;
+    display: flex;
+    align-items: center;
+    grid-gap: 15px;
+  }
+  .navbar__mobile_menu_header_search {
+    width: 100%;
+    position: relative;
+  }
+  .navbar__mobile_menu_header_search_inp {
+    width: 100%;
+    background: rgba(217, 217, 217, 0.2);
+    padding: 7px 7px 7px 43px;
+    border-radius: 5px;
+    font-family: "poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  .navbar__mobile_menu_header_search_btn {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+  }
+  .navbar__mobile_menu_header_search_btn_icon {
+    width: 17px;
+    opacity: 0.5;
+  }
+  .navbar__mobile_menu_list {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
+    display: grid;
+    grid-gap: 10px;
+  }
+  .navbar__mobile_menu_list_link {
+    display: grid;
+    grid-template-columns: 18px auto auto;
+    align-items: center;
+    grid-gap: 13px;
+  }
+  .navbar__mobile_menu_list_link_icon {
+    max-width: 18px;
+    max-height: 18px;
+  }
+  .navbar__mobile_menu_list_link_txt {
+    font-family: "poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .navbar__mobile_menu_list_link_arr {
+    display: block;
+    margin-left: auto;
   }
   .navbar__mobile_wrapper {
     display: flex;

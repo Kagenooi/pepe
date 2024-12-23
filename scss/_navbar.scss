@@ -264,18 +264,135 @@
                 top: 0;
                 left: 0;
                 width: 100%;
+                max-width: 320px;
                 height: 100%;
                 visibility: hidden;
                 opacity: 0;
                 transition: .3s;
                 z-index: 1100;
                 background: #03393C;
-                padding: 30px 0;
+                overflow-x: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
 
                 &.active {
                     visibility: visible;
                     opacity: 1;
                     transition: .3s;
+                }
+
+                &_footer {
+                    padding: 30px 20px;
+                    display: grid;
+                    grid-gap: 10px;
+
+                    &_title {
+                        font-family: 'montserrat', sans-serif;
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 21.94px;
+                        color: #A6FC00;
+                    }
+
+                    &_social {
+                        display: flex;
+                        grid-gap: 25px;
+
+                        &_link {
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+
+                            &_icon {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+
+                    &_mail,
+                    &_address {
+                        font-family: 'montserrat', sans-serif;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 17.07px;
+                    }
+
+                    &_phone {
+                        font-size: 19px;
+                        font-family: 'montserrat', sans-serif;
+                        font-weight: 700;
+                        line-height: 23.16px;
+                    }
+                }
+
+                &_header {
+                    padding: 90px 20px 15px;
+                    background: #021D1F;
+                    display: flex;
+                    align-items: center;
+                    grid-gap: 15px;
+
+                    &_search {
+                        width: 100%;
+                        position: relative;
+
+                        &_inp {
+                            width: 100%;
+                            background: #D9D9D933;
+                            padding: 7px 7px 7px 43px;
+                            border-radius: 5px;
+                            font-family: 'poppins', sans-serif;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 21px;
+                        }
+
+                        &_btn {
+                            position: absolute;
+                            top: 9px;
+                            left: 15px;
+
+                            &_icon {
+                                width: 17px;
+                                opacity: .5;
+                            }
+                        }
+                    }
+                }
+
+                &_list {
+                    padding: 20px;
+                    border-bottom: 1px solid #FFFFFF1A;
+                    display: grid;
+                    grid-gap: 10px;
+
+                    &_link {
+                        display: grid;
+                        grid-template-columns: 18px auto auto;
+                        align-items: center;
+                        grid-gap: 13px;
+
+                        &_icon {
+                            max-width: 18px;
+                            max-height: 18px;
+                        }
+
+                        &_txt {
+                            font-family: 'poppins', sans-serif;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 24px;
+                        }
+
+                        &_arr {
+                            display: block;
+                            margin-left: auto;
+                        }
+                    }
                 }
             }
 
