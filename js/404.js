@@ -11,3 +11,4 @@ const navbarMobileClose = document.querySelector('.navbar__mobile_menu_header_cl
 navbarMobileClose?.addEventListener('click', function() {
     document.querySelector('.navbar__mobile_menu').classList.toggle('active');
 })
+

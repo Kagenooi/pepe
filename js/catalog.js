@@ -127,3 +127,31 @@ selectDropdowns.forEach(dropdown => {
         });
     });
 });
+
+
+// add wishtlist 
+
+const favBtns = document.querySelectorAll('.slider__el_addWishlist');
+for (let i = 0; i < favBtns.length; i++) {
+    favBtns[i].addEventListener('click', function() {
+        this.querySelector('.favorit').classList.toggle('active');
+        this.querySelector('.slider__el_addWishlist_icon').classList.toggle('active');
+    })
+}
+
+
+const selectWrapperHidden = document.querySelectorAll('.selectWrapper');
+for (let i = 0; i < selectWrapperHidden.length; i++) {
+    let selectDropdown = selectWrapperHidden[i].querySelector('.selectDropdown')
+    let filterBtn = selectDropdown.querySelectorAll('.filter__items_select_dropdown_btn');
+    let hidden = selectDropdown.querySelector('.selectDropdownHidden');
+
+    for (let x = 0; x < filterBtn.length; x++) {
+        filterBtn[x].addEventListener('click', function() {
+            hidden.value = this.dataset.value;
+            selectDropdown.style.maxHeight = null;
+            selectWrapperHidden[i].querySelector('.selectBtn').classList.remove('active');
+            selectWrapperHidden[i].querySelector('.filter__items_select_btn_txt').innerHTML = this.innerHTML;
+        })
+    }
+}
