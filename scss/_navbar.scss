@@ -69,13 +69,18 @@
             display: none;
         }
 
-        &_icon {
+        &_btn {
             position: absolute;
             top: 8px;
             right: 15px;
             width: 21px;
             height: 21px;
             object-fit: contain;
+
+            &_icon {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 
@@ -136,9 +141,34 @@
             }
         }
 
+        &:hover &_dropdown {
+            display: block;
+        }
+
         &_dropdown {
             position: absolute;
             display: none;
+            width: 100%;
+            z-index: 1090;
+
+            &_btn {
+                display: block;
+                font-family: 'metric', sans-serif;
+                font-size: 21px;
+                font-weight: 600;
+                line-height: 24.93px;
+                text-transform: uppercase;
+                padding: 4px 8px;
+                text-align: center;
+                width: 100%;
+                transition: .2s;
+                background: #021D1F;
+
+                &:hover {
+                    transition: .2s;
+                    background: #043538;
+                }
+            }
         }
     }
 
@@ -147,14 +177,14 @@
 
         &_menu {
             display: flex;
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
 
             @media (max-width: 1440px) {
-                overflow-x: scroll;
                 padding-top: 5px;
-
-                &::-webkit-scrollbar {
-                    display: none;
-                }
             }
 
             li {
@@ -164,14 +194,16 @@
                 @media (max-width: 1440px) {
                     min-width: fit-content;
                 }
+
+                &:not(:first-child) {
+                    margin-left: 40px;
+                }
+                &:not(:last-child) {
+                    margin-right: 40px;
+                }
             }
 
             li:not(:last-child) &_link {
-                margin-right: 39px;
-
-                @media (max-width: 520px) {
-                    margin-right: 18px;
-                }
 
                 &::before {
                     content: '';
@@ -189,14 +221,6 @@
                 }
             }
 
-            li:not(:first-child) {
-                margin-left: 39px;
-
-                @media (max-width: 520px) {
-                    margin-left: 18px;
-                }
-            }
-
             &_link {
                 position: relative;
 
@@ -208,11 +232,8 @@
                     font-family: 'metric', sans-serif;
                     font-size: 21px;
                     font-weight: 600;
+                    white-space: nowrap;
                     line-height: 24.93px;
-
-                    @media (max-width: 1440px) {
-                        white-space: nowrap;
-                    }
 
                     @media (max-width: 520px) {
                         font-size: 16px;

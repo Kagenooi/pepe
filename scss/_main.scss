@@ -10,6 +10,51 @@
     font-family: 'montserrat', sans-serif;
 }
 
+
+.viewAll {
+    font-family: 'poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    text-decoration-line: underline;
+    display: block;
+    margin-top: 22px;
+    color: #FFFFFF66;
+    text-transform: capitalize;
+}
+
+.slider__el_addWishlist_icon {
+    display: block;
+    width: 25px;
+
+    &.active {
+        display: none;
+    }
+}
+
+a,
+p,
+b,
+strong,
+span {
+    transition: .2s;
+    opacity: 1;
+
+    &:hover {
+        opacity: .7;
+        transition: .2s;
+    }
+}
+
+.favorit {
+    display: none;
+    width: 25px;
+
+    &.active {
+        display: block;
+    }
+}
 html {
     scroll-behavior: smooth;
 }

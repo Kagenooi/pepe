@@ -230,6 +230,7 @@
                     color: #FFFFFF99;
                     background: #2e4b4d;
                     transition: .3s;
+                    text-align: left;
 
                     &:hover {
                         transition: .3s;
@@ -267,6 +268,10 @@
     background: #fff;
     padding: 120px 0 35px;
 
+    @media (max-width: 580px) {
+        padding-top: 150px;
+    }
+
     &__wrapper {
         position: relative;
         width: 100%;
@@ -276,7 +281,7 @@
     }
 
     &__title {
-        font-size: 227px;
+        font-size: 180px;
         font-weight: 800;
         letter-spacing: -10px;
         line-height: 276.71px;

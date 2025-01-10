@@ -7,6 +7,10 @@
 .header {
     padding: 120px 0 35px;
 
+    @media (max-width: 580px) {
+        padding-top: 150px;
+    }
+
     &__wrapper {
         position: relative;
         width: 100%;
@@ -16,7 +20,7 @@
     }
 
     &__title {
-        font-size: 227px;
+        font-size: 180px;
         font-weight: 800;
         letter-spacing: -10px;
         line-height: 276.71px;
@@ -35,40 +39,14 @@
 
     &__img {
         width: 100%;
+        margin-top: -200px;
         position: relative;
-        height: 630px;
-
-        @media (max-width: 520px) {
-            height: auto;
-        }
 
         &_pic {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-
-            @media (max-width: 520px) {
-                position: static;
-            }
-        }
-
-        &_abs {
-            position: absolute;
-            bottom: 35px;
-            right: 16%;
-
-            @media (max-width: 520px) {
-                width: 42%;
-                bottom: 7px;
-                right: 16%;
-            }
         }
     }
 }
-
 
 .catalog {
     padding: 30px 0;
@@ -85,6 +63,7 @@
         @media (max-width: 1440px) {
             grid-template-columns: repeat(5, 1fr);
         }
+
         @media (max-width: 1020px) {
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 10px;

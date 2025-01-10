@@ -28,6 +28,52 @@
   font-family: "montserrat", sans-serif;
 }
 
+.viewAll {
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-decoration-line: underline;
+  display: block;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: capitalize;
+}
+
+.slider__el_addWishlist_icon {
+  display: block;
+  width: 25px;
+}
+.slider__el_addWishlist_icon.active {
+  display: none;
+}
+
+a,
+p,
+b,
+strong,
+span {
+  transition: 0.2s;
+  opacity: 1;
+}
+a:hover,
+p:hover,
+b:hover,
+strong:hover,
+span:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.favorit {
+  display: none;
+  width: 25px;
+}
+.favorit.active {
+  display: block;
+}
+
 html {
   scroll-behavior: smooth;
 }
