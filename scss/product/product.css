@@ -283,6 +283,7 @@ img {
 .navbar__bottom_menu {
   display: flex;
   overflow-x: auto;
+  padding-top: 4px;
 }
 .navbar__bottom_menu::-webkit-scrollbar {
   display: none;
@@ -306,6 +307,11 @@ img {
 }
 .navbar__bottom_menu li:not(:first-child) {
   margin-left: 40px;
+}
+@media (max-width: 580px) {
+  .navbar__bottom_menu li:not(:first-child) {
+    margin-left: 0;
+  }
 }
 .navbar__bottom_menu li:not(:last-child) {
   margin-right: 40px;
@@ -918,6 +924,37 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
     padding: 15px;
   }
 }
+.productWrapper__desc_info_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid rgba(173, 255, 0, 0.5019607843);
+  height: 45px;
+}
+.productWrapper__desc_info_wrapper {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  max-height: 360px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+@media (max-width: 520px) {
+  .productWrapper__desc_info_wrapper {
+    margin-bottom: 20px;
+  }
+}
+.productWrapper__desc_info_wrapper p {
+  font-family: "alternates", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 23px;
+}
+.productWrapper__desc_info_wrapper p:last-child {
+  font-weight: 500;
+  text-align: right;
+}
 .productWrapper__desc_header {
   display: flex;
   align-items: flex-start;
@@ -962,30 +999,6 @@ li:not(:last-child) .navbar__bottom_menu_link::before {
 .productWrapper__desc_header_btns_btn_icon {
   height: 20px;
   opacity: 0.8;
-}
-.productWrapper table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 40px;
-}
-@media (max-width: 520px) {
-  .productWrapper table {
-    margin-bottom: 20px;
-  }
-}
-.productWrapper table tr {
-  border-bottom: 1px solid rgba(173, 255, 0, 0.5019607843);
-  height: 45px;
-}
-.productWrapper table td {
-  font-family: "alternates", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 23px;
-}
-.productWrapper table td:last-child {
-  font-weight: 500;
-  text-align: right;
 }
 .productWrapper .showAll {
   font-family: "alternates", sans-serif;

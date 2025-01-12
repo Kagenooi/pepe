@@ -75,3 +75,15 @@ for (let i = 0; i < selectWrapperHidden.length; i++) {
         })
     }
 }
+
+
+
+const tableWrapper = document.querySelector('.productWrapper__desc_info_wrapper');
+const tableWrapperBtn = document.querySelector('.productWrapper__desc .showAll');
+tableWrapperBtn.addEventListener('click', function() {
+    if (tableWrapper.style.maxHeight) {
+        tableWrapper.style.maxHeight = null;
+    } else {
+        tableWrapper.style.maxHeight = tableWrapper.style.maxHeight + tableWrapper.scrollHeight + 'px';
+    }
+})

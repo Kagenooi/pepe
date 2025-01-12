@@ -283,6 +283,7 @@ img {
 .navbar__bottom_menu {
   display: flex;
   overflow-x: auto;
+  padding-top: 4px;
 }
 .navbar__bottom_menu::-webkit-scrollbar {
   display: none;
@@ -306,6 +307,11 @@ img {
 }
 .navbar__bottom_menu li:not(:first-child) {
   margin-left: 40px;
+}
+@media (max-width: 580px) {
+  .navbar__bottom_menu li:not(:first-child) {
+    margin-left: 0;
+  }
 }
 .navbar__bottom_menu li:not(:last-child) {
   margin-right: 40px;

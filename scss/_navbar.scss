@@ -178,6 +178,7 @@
         &_menu {
             display: flex;
             overflow-x: auto;
+            padding-top: 4px;
 
             &::-webkit-scrollbar {
                 display: none;
@@ -197,6 +198,10 @@
 
                 &:not(:first-child) {
                     margin-left: 40px;
+
+                    @media (max-width: 580px) {
+                        margin-left: 0;
+                    }
                 }
                 &:not(:last-child) {
                     margin-right: 40px;

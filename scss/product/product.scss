@@ -115,6 +115,7 @@
                 height: 110px;
             }
         }
+
         .swiper-slide img {
             height: 100%;
         }
@@ -137,6 +138,43 @@
 
         @media (max-width: 520px) {
             padding: 15px;
+        }
+
+        &_info {
+
+            &_item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                border-bottom: 1px solid #ADFF0080;
+                height: 45px;
+            }
+
+            &_wrapper {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 40px;
+                max-height: 360px;
+                transition: .3s;
+                overflow: hidden;
+
+                @media (max-width: 520px) {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-family: 'alternates', sans-serif;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 23px;
+
+                    &:last-child {
+                        font-weight: 500;
+                        text-align: right;
+                    }
+                }
+            }
         }
 
         &_header {
@@ -194,32 +232,6 @@
         }
     }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 40px;
-
-        @media (max-width: 520px) {
-            margin-bottom: 20px;   
-        }
-        tr {
-            border-bottom: 1px solid #ADFF0080;
-            height: 45px;
-        }
-
-        td {
-            font-family: 'alternates', sans-serif;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 23px;
-
-            &:last-child {
-                font-weight: 500;
-                text-align: right;
-            }
-        }
-    }
-
     .showAll {
         font-family: 'alternates', sans-serif;
         font-size: 15px;
@@ -230,7 +242,7 @@
 
         @media (max-width: 520px) {
             display: block;
-            text-align: center;   
+            text-align: center;
         }
     }
 }
